@@ -295,57 +295,67 @@ body {
 .fo-para {
     display: block;
 }
-    .mobile-navbar {
-      color: white;
-      background-color: #333;
-      height: 100vh;
-      width: 280px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      box-shadow: 3px 0 10px rgba(0, 0, 0, 0.2);
-      position: fixed;
-      left: 0;
-      top: 0;
-    }
 
-    .mobile-nav-header {
-      width: 100%;
-      padding: 15px;
-      font-size: 1.6rem;
-      text-align: center;
-      background-color: #444;
-      border-bottom: 2px solid rgba(255, 255, 255, 0.2);
-    }
+.mobile-navbar {
+    color: white;
+    background-color: #333;
+    /* background: transparent; */
+    height: 100vh;
+    width: 280px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 3px 0 10px rgba(0, 0, 0, 0.2);
+    position: fixed;
+    right: 0;
+    top: 0;
+    display: none;
+}
 
-    .nav-links {
-      width: 100%;
-      margin-top: 20px;
-    }
+.mobile-nav-header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    padding: 15px;
+    font-size: 1.6rem;
+    text-align: center;
+    background-color: #444;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+}
+.mobile-nav-header i:last-child{
+    padding: 5px 10px;
+    background-color: red;
+}
 
-    .nav-links a {
-      text-decoration: none;
-      color: white;
-      display: flex;
-      align-items: center;
-      padding: 12px 20px;
-      font-size: 1.2rem;
-      transition: 0.3s;
-    }
+.nav-links {
+    width: 100%;
+    margin-top: 20px;
+}
 
-    .nav-links a i {
-      margin-right: 15px;
-      font-size: 1.4rem;
-    }
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 12px 20px;
+    font-size: 1.2rem;
+    transition: 0.3s;
+}
 
-    .nav-links a:hover {
-      background-color: rgba(255, 255, 255, 0.15);
-      padding-left: 25px;
-    }
+.nav-links a i {
+    margin-right: 15px;
+    font-size: 1.4rem;
+}
 
-    /* Content area */
-    #content {
-      margin-left: 280px;
-      padding: 30px;
-      flex-grow: 1;
-    }
+.nav-links a:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+    padding-left: 25px;
+}
+
+/* Content area */
+#content {
+    margin-left: 280px;
+    padding: 30px;
+    flex-grow: 1;
+}
