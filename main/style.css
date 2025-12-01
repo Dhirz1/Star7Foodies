@@ -6,10 +6,14 @@
     font-family: "Poppins", sans-serif;
     box-sizing: border-box;
 }
+button{
+    cursor: pointer;
+}
 
 body {
     width: 100%;
     height: auto;
+    /* background-color: white; */
 }
 
 .container {
@@ -37,9 +41,14 @@ body {
     padding: 10px;
 }
 
-.nav .logo h1 {
+.nav .logo a {
+    text-decoration: none;
+    font-family: "Edu NSW ACT Cursive", cursive;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
     color: #fff;
-    font-size: 2.5rem;
+    font-size: 2.8rem;
 }
 
 .nav .links {
@@ -62,6 +71,7 @@ body {
 }
 
 .nav .links ul li a {
+    font-family: "Dancing Script", cursive;
     font-size: 1.45rem;
     font-weight: 600;
     text-decoration: none;
@@ -77,107 +87,93 @@ body {
 
 
 .main {
+    /* display: none; */
     width: 100%;
     height: calc(100vh - 80px);
-    background-image: url("https://plus.unsplash.com/premium_photo-1663013275516-6afd24602981?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170");
+    background-image: url("https://github.com/Dhirz1/Images/blob/main/restaurant-hero.png?raw=true");
+
     background-size: cover;
     background-position: center;
+    /* opacity: 0.7; */
 }
 
-.search-box {
-    position: relative;
+.main .box-center {
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100%;
-    width: 100%;
-    background: rgba(47, 60, 126, 0.4);
-    backdrop-filter: blur(1.2px);
+    flex-direction: column;
 }
 
-.search-box input {
-    width: 80%;
-    max-width: 500px;
-    height: 60px;
-    border-radius: 50px;
-    border: none;
-    outline: none;
-    padding: 0 70px 0 70px;
-    font-size: 1.5rem;
-    color: #fff;
-    background: rgba(255, 255, 255, 0.1);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
-    border: 2px solid rgba(254, 231, 21, 0.2);
-    transition: all 0.3s ease;
-    font-weight: 500;
+.main .box-center h2 {
+    font-family: "Dancing Script", cursive;
+    color: #ffffffd9;
+    font-size: 2.4rem;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    font-weight: 400;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+    animation: fadeDown 1s ease-out;
 }
 
-/* Placeholder */
-.search-box input::placeholder {
-    text-align: center;
-    color: rgba(255, 255, 255, 0.85);
-    font-size: 1.2rem;
-    letter-spacing: 0.5px;
-}
-
-/* Search icon on left */
-.search-box::before {
-    content: "\f002";
-    /* Font Awesome search icon */
-    font-family: "Font Awesome 6 Free";
-    font-weight: 900;
-    position: absolute;
-    left: calc(50% - 250px + 25px);
+.main .box-center h1 {
     color: #FEE715;
-    font-size: 1.7rem;
-    opacity: 0.9;
-    pointer-events: none;
-}
-
-/* Focus effect */
-.search-box input:focus {
-    background: rgba(255, 255, 255, 0.18);
-    border: 2px solid #FEE715;
-    box-shadow: 0 0 25px rgba(254, 231, 21, 0.5);
-    transform: scale(1.02);
-}
-
-/* Small hover effect */
-.search-box input:hover {
-    border-color: rgba(254, 231, 21, 0.4);
-}
-
-.section {
-    /* position: relative; */
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-}
-
-.section p {
+    font-size: 3.8rem;
+    font-weight: 700;
     position: relative;
-    cursor: pointer;
-    padding: 10px 20px;
-    font-size: 2.2rem;
-    color: #2F3C7E;
-    transition: color 0.3s ease;
+    text-shadow: 0 0 12px rgba(0, 0, 0, 0.6);
+    animation: fadeUp 1s ease-out 0.2s;
 }
 
-
-
-/* Active underline animation */
-.active::after {
+.main .box-center h1::after {
     content: "";
     position: absolute;
+    bottom: -12px;
     left: 50%;
-    bottom: 0;
+    width: 0;
+    height: 3px;
+    background: #FEE715;
     transform: translateX(-50%);
-    width: 100%;
-    height: 4px;
-    background-color: #FEE715;
-    border-radius: 2px;
-    animation: underline-grow 0.3s ease forwards;
+    border-radius: 10px;
+    animation: underlineGrow 1.2s forwards 0.4s;
 }
+
+@keyframes fadeDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes underlineGrow {
+    from {
+        width: 0;
+        opacity: 0;
+    }
+
+    to {
+        width: 60%;
+        opacity: 1;
+    }
+}
+
 
 /* Small entry animation */
 @keyframes underline-grow {
@@ -190,6 +186,31 @@ body {
         width: 60%;
         opacity: 1;
     }
+}
+
+.menu-section {
+    font-size: 2.8rem;
+    text-align: center;
+    padding: 20px;
+    font-family: "Edu NSW ACT Cursive", cursive;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.dice-section {
+    background: linear-gradient(120deg, #2d2b24 0%, #443c31 60%, #FAF3E5 100%);
+}
+
+.dice-section .menu-img img {
+    height: 250px;
+}
+
+.dice-section .menu-img {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .dice {
@@ -278,13 +299,37 @@ body {
     color: #2F3C7E;
 }
 
-.veg {
-    display: none;
-}
 
 .dice-menu {
     display: none;
 }
+
+.menu-btn{
+    display: flex;
+    /* background-color: red; */
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    width: 100%;
+}
+.menu-btn button{
+        width: 165px;
+        height: 62px;
+        cursor: pointer;
+        color: #fff;
+        font-size: 17px;
+        border-radius: 1rem;
+        border: none;
+        position: relative;
+        background: #100720;
+        transition: 0.1s;
+        
+    }
+    .menu-btn a button:hover{
+        background-color: var(red);
+    }
+        
 
 .f-para {
     display: none;
@@ -323,7 +368,8 @@ body {
     background-color: #444;
     border-bottom: 2px solid rgba(255, 255, 255, 0.2);
 }
-.mobile-nav-header i:last-child{
+
+.mobile-nav-header i:last-child {
     padding: 5px 10px;
     background-color: red;
 }
@@ -359,3 +405,82 @@ body {
     padding: 30px;
     flex-grow: 1;
 }
+/* ---------------- FOOTER DESIGN ---------------- */
+
+.footer {
+    background-color: #2F3C7E;
+    color: #fff;
+    padding: 40px 20px 10px;
+    /* margin-top: 50px; */
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.footer-box {
+    flex: 1 1 250px;
+    margin: 15px;
+}
+
+.footer-box h3 {
+    font-size: 1.6rem;
+    margin-bottom: 12px;
+    color: #FEE715;
+}
+
+.footer-box p,
+.footer-box a {
+    margin: 5px;
+    font-size: 1rem;
+    color: #e2e2e2;
+}
+
+.footer-box ul {
+    list-style: none;
+}
+
+.footer-box ul li {
+    margin: 6px 0;
+}
+
+.footer-box ul li a {
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.footer-box ul li a:hover {
+    color: #FEE715;
+    padding-left: 4px;
+}
+
+.social-links a {
+    font-size: 1.4rem;
+    color: #FEE715;
+    margin-right: 15px;
+    transition: 0.3s;
+}
+
+.social-links a:hover {
+    color: white;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 15px 0 0;
+    margin-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.footer-bottom p {
+    font-size: 0.95rem;
+    color: #ddd;
+}
+
+
+/* Responsive Footer */
+
