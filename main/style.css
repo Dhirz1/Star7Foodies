@@ -75,6 +75,7 @@ body {
 }
 
 .menu {
+    padding: 10px !important;
     display: none;
     font-size: 1.8rem;
     color: #FEE715;
