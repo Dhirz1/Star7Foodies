@@ -36,11 +36,6 @@ body {
     align-items: center;
 }
 
-.nav .logo {
-    flex-basis: 45%;
-    padding: 10px;
-}
-
 .nav .logo a {
     text-decoration: none;
     font-family: "Edu NSW ACT Cursive", cursive;
@@ -87,15 +82,15 @@ body {
 
 
 .main {
-    /* display: none; */
     width: 100%;
-    height: calc(100vh - 80px);
+    /* height: 100%; */
+    /* height: calc(100vh - 80px);  */
+    height: calc(100dvh - 80px);
     background-image: url("https://github.com/Dhirz1/Images/blob/main/restaurant-hero.png?raw=true");
-
     background-size: cover;
     background-position: center;
-    /* opacity: 0.7; */
 }
+
 
 .main .box-center {
     height: 100%;
