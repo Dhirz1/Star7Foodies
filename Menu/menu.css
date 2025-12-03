@@ -4,7 +4,7 @@
     padding: 0;
     scrollbar-width: none;
     box-sizing: border-box;
-    color: white;
+    /* color: white; */
     font-family: var(--font-family-monospace);
 }
 
@@ -12,8 +12,9 @@ h3{
     font-family: "Titillium Web", sans-serif;
 }
 
-i{
-    /* color: yellow; */
+
+.links ul li:last-child{
+    color: yellow;
 }
 
 body{
@@ -49,6 +50,7 @@ body{
 
 /* Body Dimension */
 body{
+    color: white;
     width: 100vw;
     height: 100vh;
 }
