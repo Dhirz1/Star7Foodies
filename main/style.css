@@ -270,6 +270,9 @@ body {
     font-weight: 600;
     margin-bottom: 15px;
 }
+.box-content span:first-child{
+    font-size: larger;
+}
 
 .price {
     color: #2F3C7E;
